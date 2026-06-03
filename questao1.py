@@ -1,4 +1,4 @@
-class Capsuladotempo:
+ class Capsuladotempo:
     def __init__(self, autor, mensagem, ano_abertura, ano_atual):
         self.autor = autor
         self.mensagem = mensagem

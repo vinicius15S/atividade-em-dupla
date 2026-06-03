@@ -8,11 +8,11 @@ class TorneioDeDrones:
 
     def listar_provas(self):
         print("Provas disponíveis:")
-        for i, prova in enumerate(self.provas):
+        for prova in self.provas:
             print(
-                f"{i} - Nome: {prova['nome']} | "
-                f"Custo: {prova['custo']} | "
-                f"Pontuação: {prova['pontuacao']}"
+                f"- Nome: {self.provas['nome']}"
+                f"Custo: {self.provas['custo']}"
+                f"Pontuação: {self.provas['pontuacao']}"
             )
 
     def tentar_prova(self, numero_prova):
@@ -50,9 +50,17 @@ class TorneioDeDrones:
             return "Torneio em andamento."
 
     def exibir_relatorio(self):
-        print("\n=== RELATÓRIO DO TORNEIO ===")
         print(f"Torneio: {self.nome_torneio}")
         print(f"Bateria restante: {self.bateria}")
         print(f"Pontos: {self.pontos}")
         print(f"Provas concluídas: {self.calcular_progresso()}")
         print(f"Situação: {self.verificar_situacao()}")
+
+
+
+drone=TorneioDeDrones("Torneio óvni", "Prova de matemática", 50)
+drone.listar_provas()
+drone.tentar_prova(2)
+drone.calcular_progresso()
+drone.verificar_situacao()
+drone.exibir_relatorio()
